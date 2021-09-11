@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Web Timer 2.0</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <div class = "Content">
+    <section class="Timer">
+      <h1 class="TimerHeading">0:0:0</h1>
+      <button id="startTimer">Start</button>
+      <button id="setTimer">Set Timer</button>
+    </section><!--Timer-->
+
+    <section class="InputModal">
+      <div class = "InputModalContent">
+        <span class="Close">&times;</span>
+        <h1>Set your Timer</h1>
+        <label for="hours"> Hours : </label>
+        <input type="number" id="hours" min=0>
+        <label for="minutes"> Minutes : </label>
+        <input type="number" id="minutes" min=0>
+        <label for="seconds"> Seconds : </label>
+        <input type="number" id="seconds" min=0>
+      </div> <!-- InputModalContent -->
+    </section><!--InputModal-->
+
+    <div class = "WorkingProgress">
+      <h3>Working On</h3>
+      <h3 class = "WorkTitle"></h3>
+    </div><!-- WorkingProgress -->
+
+    <section class = "TaskSection">
+      <h2>Tasks</h2>
+      <img class = "MoreButton" src = "resources/more-three-dots.png" alt = "More settings">
+      <div class = "DropDownContent">
+          <p onclick = output.deleteAllTask()>
+          <img src = "resources/delete.png" alt="delete icon">
+          Delete all task
+          </p>
+          <p onclick = output.checkAllTask()>
+            <img src = "resources/tick.png" alt="delete icon">
+            Check all task
+          </p>
+          <p onclick = output.uncheckAllTask()>
+            <img src = "resources/cross.png" alt="delete icon">
+            Uncheck all task
+          </p>
+      </div><!-- DropDownContent -->
+
+      <div class="ProgressBar" style = "clear:both">
+        <div class = "ProgressStatus"></div>
+      </div> <!-- ProgressBar -->
+    </section> <!--TaskSection -->
+
+    <div class = "AddTask">
+        <img src = "resources/add-icon.svg" width = "16px" height = "16px">
+        <h4 > Add Task </h4>
+    </div><!-- AddTask -->
+
+  </div> <!-- Content -->
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/main.js"></script>
+
+</body><!-- body -->
+
+</html>
